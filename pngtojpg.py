@@ -1,6 +1,7 @@
 from glob import glob                                                           
 import cv2 
-pngs = glob(r'D:\Dataset\New folder\dotacocoHBB\trainval1024\images'+'/*.png')
+Path='PATH_TO_PNG_IMAGES_FOLDER'
+pngs = glob(Path+'/*.png')
 
 for j in pngs:
     img = cv2.imread(j)
