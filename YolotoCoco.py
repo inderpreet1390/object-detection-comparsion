@@ -5,8 +5,7 @@ import cv2
 import random
 import time
 
-yolo_format_classes_path = r'D:\New folder\dotajpg\test\dota.names'
-# Write the category according to your own data set. 
+yolo_format_classes_path = r'Path to yolo classes .name file'
 
 #Read the categories file and extract all categories
 with open(yolo_format_classes_path,'r') as f1:
@@ -17,7 +16,7 @@ for j,label in enumerate(lines1):
     categories.append({'id':j+1,'name':label,'supercategory': label})
     
 write_json_context = dict()
-write_json_context['info'] = {'description': '', 'url': '', 'version': '', 'year': 2021, 'contributor': '', 'date_created': '2021-02-12 11:00:08.5'}
+write_json_context['info'] = {'description': '', 'url': '', 'version': '', 'year': 2021, 'contributor': '', 'date_created': ''}
 write_json_context['licenses'] = [{'id': 1, 'name': None, 'url': None}]
 write_json_context['categories'] = categories
 write_json_context['images'] = []
@@ -25,9 +24,8 @@ write_json_context['annotations'] = []
 
 
 #Read the label files (.txt) to extarct bounding box information and store in COCO format
-directory_labels = os.fsencode(r"E:\dataseets\dotajpg2\dotajpg\val\labelTxt")
-#directory_images = os.fsencode("/home/jyoti/Desktop/csc8800/datasets/DoorDetectDataset/test")
-directory_images = os.fsencode(r"E:\dataseets\dotajpg2\dotajpg\val\images")
+directory_labels = os.fsencode(r"Path to Txt")
+directory_images = os.fsencode(r"Path to images")
 
 file_number = 1
 num_bboxes = 1
@@ -45,8 +43,8 @@ for file in os.listdir(directory_images):
         img_context['file_name'] = img_name
         img_context['height'] = height
         img_context['width'] = width
-        img_context['date_captured'] = '2021-02-12 11:00:08.5'
-        img_context['id'] = file_number # image id
+        img_context['date_captured'] = ''
+        img_context['id'] = file_number
         img_context['license'] = 1
         img_context['coco_url'] =''
         img_context['flickr_url'] = ''
@@ -86,8 +84,6 @@ for file in os.listdir(directory_images):
     else:
         continue
         
- # Finally done, save!
-#coco_format_save_path = '/home/jyoti/Desktop/csc8800/datasets/DoorDetectDataset/test.json'
-coco_format_save_path = r'E:\dataseets\dotajpg2\dotajpg\train\instances_val.json'
+coco_format_save_path = r'Path to json'
 with open(coco_format_save_path,'w') as fw:
     json.dump(write_json_context,fw)
