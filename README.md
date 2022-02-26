@@ -23,3 +23,5 @@ YOLOv5 weights:
 [yolov5s](https://drive.google.com/file/d/1GsQXa3T6jO6sUIONxMFM7efKPHGeJn0r/view?usp=sharing)
 
 [yolov5m](https://drive.google.com/file/d/1GsQXa3T6jO6sUIONxMFM7efKPHGeJn0r/view?usp=sharing)
+
+[yolov5l](https://drive.google.com/file/d/1yl-kZaWuc3_4xIM_GXaF_aAR3nsDZZng/view?usp=sharing)
