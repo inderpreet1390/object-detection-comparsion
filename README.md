@@ -27,3 +27,5 @@ YOLOv5 weights:
 [yolov5l](https://drive.google.com/file/d/1yl-kZaWuc3_4xIM_GXaF_aAR3nsDZZng/view?usp=sharing)
 
 [FCOS](https://drive.google.com/file/d/1khBnScJI5UbiL3yz4hn_k_IxR5XzaeCd/view?usp=sharing)
+
+[CenterNet](https://drive.google.com/file/d/1HpHoKGMnA9Vqh4rLFUXB1FOuMvFKK1Cj/view?usp=sharing)
